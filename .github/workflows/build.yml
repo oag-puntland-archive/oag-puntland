@@ -68,12 +68,19 @@ jobs:
           print(f"OK: {len(rows)} provenance rows · {sum(1 for _ in root.glob('corpus/**/*.pdf'))} PDFs in corpus, all accounted for")
           PY
 
-      - name: Ingest + build
+      - name: Build (ingest + astro build + strip-paths)
         working-directory: site
-        run: pnpm run prebuild && pnpm exec astro build
+        run: pnpm run build
 
       - name: Reproducibility two-pass check
         run: bash scripts/reproducibility-check.sh
+
+      - name: Rebuild canonical dist (repro-check destroyed it)
+        working-directory: site
+        run: pnpm run build
+
+      - name: Takedown-survival simulation
+        run: bash scripts/takedown-sim.sh
 
       - name: Internal link check
         run: node scripts/link-check.mjs
