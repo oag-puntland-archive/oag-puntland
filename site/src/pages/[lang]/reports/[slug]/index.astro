@@ -37,9 +37,14 @@ const pendingVersions = report.versions.filter((v: any) => v.status === "officia
           <span style="color: var(--c-ink-soft); font-weight: 400;">{(v.bytes / (1024 * 1024)).toFixed(1)} MB · {v.pages} {t("reports_pages_label", lang)}</span>
         </h3>
         <div class="actions">
-          <a class="btn" href={v._public_url} download>
+          <a class="btn" href={v._public_url} download={v._served_from === "cloudflare-pages" ? "" : undefined}>
             {t("reports_download_pdf", lang)} →
           </a>
+          {v._served_from === "github-mirror" && (
+            <p style="font-size: 0.85rem; color: var(--c-ink-soft); margin-top: 0.6em;">
+              Served from the GitHub mirror (file exceeds the host site's per-file limit). The bytes are byte-identical to the corpus; verify by re-computing the SHA-256 above.
+            </p>
+          )}
         </div>
         <dl class="kv" style="margin-top: 1em;">
           <dt>{t("reports_sha256_label", lang)}</dt><dd><code>{v.sha256}</code></dd>

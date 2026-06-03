@@ -19,6 +19,12 @@ const SITE_PUBLIC = resolve(ROOT, "site", "public");
 const SITE_DATA = resolve(ROOT, "site", "src", "data");
 const PROVENANCE = resolve(ROOT, "governance", "provenance.csv");
 
+// Cloudflare Pages has a 25 MiB per-file limit. Files larger than this are served
+// directly from the GitHub mirror's raw URL (doctrine: the mirror IS the canonical
+// source; the same sha256 verifies; no decision is made by this site about content).
+const PAGES_FILE_LIMIT_BYTES = 25 * 1024 * 1024;
+const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/oag-puntland-archive/oag-puntland/main";
+
 // ---- minimal YAML parser (the corpus uses our own emitter; safe to round-trip) ----
 function parseMinimalYAML(text) {
   // Handles: dict, list-of-dict, scalars (string/number/bool/null), nested via indent (2 spaces).
@@ -175,11 +181,19 @@ async function main() {
           `[ingest] PDF reports/${slug}/${v.pdf} has sha ${actual} but is NOT in governance/provenance.csv (already-public doctrine violation)`,
         );
       }
-      const destDir = join(SITE_PUBLIC, "reports", slug, v.lang);
-      await ensureDir(destDir);
-      const destPath = join(destDir, "full.pdf");
-      await copyFile(srcPdf, destPath);
-      v._public_url = `/reports/${slug}/${v.lang}/full.pdf`;
+      if (v.bytes > PAGES_FILE_LIMIT_BYTES) {
+        // Too large for Cloudflare Pages — link to GitHub raw mirror instead.
+        v._public_url = `${GITHUB_RAW_BASE}/corpus/reports/${slug}/${v.lang}/full.pdf`;
+        v._served_from = "github-mirror";
+        console.log(`[ingest] reports/${slug}/${v.lang}: ${(v.bytes/1024/1024).toFixed(1)} MiB > 25 MiB → linking to GitHub mirror`);
+      } else {
+        const destDir = join(SITE_PUBLIC, "reports", slug, v.lang);
+        await ensureDir(destDir);
+        const destPath = join(destDir, "full.pdf");
+        await copyFile(srcPdf, destPath);
+        v._public_url = `/reports/${slug}/${v.lang}/full.pdf`;
+        v._served_from = "cloudflare-pages";
+      }
     }
     reports.push(data);
   }
@@ -211,10 +225,17 @@ async function main() {
         `[ingest] PDF legislation/${slug}/${doc.pdf} has sha ${actual} but is NOT in governance/provenance.csv`,
       );
     }
-    const destDir = join(SITE_PUBLIC, "legislation", slug);
-    await ensureDir(destDir);
-    await copyFile(srcPdf, join(destDir, "document.pdf"));
-    doc._public_url = `/legislation/${slug}/document.pdf`;
+    if (doc.bytes > PAGES_FILE_LIMIT_BYTES) {
+      doc._public_url = `${GITHUB_RAW_BASE}/corpus/legislation/${slug}/document.pdf`;
+      doc._served_from = "github-mirror";
+      console.log(`[ingest] legislation/${slug}: ${(doc.bytes/1024/1024).toFixed(1)} MiB > 25 MiB → linking to GitHub mirror`);
+    } else {
+      const destDir = join(SITE_PUBLIC, "legislation", slug);
+      await ensureDir(destDir);
+      await copyFile(srcPdf, join(destDir, "document.pdf"));
+      doc._public_url = `/legislation/${slug}/document.pdf`;
+      doc._served_from = "cloudflare-pages";
+    }
     legislation.push(data);
   }
   await writeFile(

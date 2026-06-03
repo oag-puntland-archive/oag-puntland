@@ -32,7 +32,8 @@
         "source_url": "https://oag.pl.so/wp-content/uploads/2025/07/Warbixinta-Xisaab-Xirka-2023_Hantidhawrka-Guud.pdf",
         "source_landing_page": "https://oag.pl.so/audit-reports/financial-audits/fy-2023-annual-audit-report-somali-version-copy-2/",
         "fetched_utc": "2026-06-02T16:10:46+00:00",
-        "_public_url": "/reports/fy-2023-annual-audit-report/so/full.pdf"
+        "_public_url": "https://raw.githubusercontent.com/oag-puntland-archive/oag-puntland/main/corpus/reports/fy-2023-annual-audit-report/so/full.pdf",
+        "_served_from": "github-mirror"
       },
       {
         "lang": "en",
@@ -79,7 +80,8 @@
         "source_url": "https://oag.pl.so/wp-content/uploads/2026/01/Final-Audited-Annual-Financial-Statements-2024-Eng-Version-1.pdf",
         "source_landing_page": "https://oag.pl.so/audit-reports/financial-audits/fy-2024-annual-audit-report-somali-version-copy/",
         "fetched_utc": "2026-06-02T16:10:46+00:00",
-        "_public_url": "/reports/fy-2024-annual-audit-report/en/full.pdf"
+        "_public_url": "/reports/fy-2024-annual-audit-report/en/full.pdf",
+        "_served_from": "cloudflare-pages"
       },
       {
         "lang": "so",
@@ -90,7 +92,8 @@
         "source_url": "https://oag.pl.so/wp-content/uploads/2025/07/Warbixinta-Hantidhawrka-ee-Xisaab-Xirka-Dawladda-2024.pdf",
         "source_landing_page": "https://oag.pl.so/audit-reports/financial-audits/fy-2023-annual-audit-report-somali-version-copy/",
         "fetched_utc": "2026-06-02T16:10:46+00:00",
-        "_public_url": "/reports/fy-2024-annual-audit-report/so/full.pdf"
+        "_public_url": "/reports/fy-2024-annual-audit-report/so/full.pdf",
+        "_served_from": "cloudflare-pages"
       }
     ],
     "_slug": "fy-2024-annual-audit-report",
