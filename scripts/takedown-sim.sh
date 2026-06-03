@@ -33,9 +33,8 @@ echo "[takedown-sim] installing site/ deps in the clone …"
 cd site
 pnpm install --frozen-lockfile --silent
 
-echo "[takedown-sim] running ingest + build in the clone …"
-SOURCE_DATE_EPOCH="$EPOCH" pnpm run prebuild
-SOURCE_DATE_EPOCH="$EPOCH" pnpm exec astro build --silent
+echo "[takedown-sim] running full build (prebuild + build + postbuild) in the clone …"
+SOURCE_DATE_EPOCH="$EPOCH" pnpm run build --silent 2>&1 | tail -3
 
 echo "[takedown-sim] hashing rebuilt dist …"
 cd dist

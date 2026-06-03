@@ -18,15 +18,14 @@ echo "[reproducibility] cleaning..."
 rm -rf dist dist-first dist-second .astro
 
 echo "[reproducibility] first build (SOURCE_DATE_EPOCH=$EPOCH)..."
-SOURCE_DATE_EPOCH="$EPOCH" pnpm exec astro build --silent
+SOURCE_DATE_EPOCH="$EPOCH" pnpm run build --silent
 mv dist dist-first
 
 echo "[reproducibility] cleaning intermediates..."
 rm -rf .astro src/data/reports.json src/data/legislation.json src/data/custody.json public/reports public/legislation public/governance
 
 echo "[reproducibility] second build (SOURCE_DATE_EPOCH=$EPOCH)..."
-SOURCE_DATE_EPOCH="$EPOCH" node "$ROOT/scripts/ingest.mjs"
-SOURCE_DATE_EPOCH="$EPOCH" pnpm exec astro build --silent
+SOURCE_DATE_EPOCH="$EPOCH" pnpm run build --silent
 mv dist dist-second
 
 echo "[reproducibility] diff -r dist-first dist-second:"
