@@ -37,3 +37,43 @@ Wayback Save Page Now: `curl -L "https://web.archive.org/save/<deployed-url>"` p
 archive.today: submit via `https://archive.ph/?run=1&url=<deployed-url>` (avoid bursts; they 429 aggressively).
 
 Append snapshot URLs + capture timestamps to this file on every snapshot cycle (post-deploy + monthly cadence thereafter).
+
+## 2026-06-03 — v1 deployed site snapshots (https://oag-puntland.pages.dev)
+
+Submitted via parallel Wayback Save Page Now + archive.today after the v1 Cloudflare Pages deploy. PDF byte-match verified at deploy time (canonical sha256 matched for all 5 sampled PDFs).
+
+### Wayback Machine
+
+| Path | Snapshot | Captured (UTC) | HTTP |
+|---|---|---|---|
+| `/` | https://web.archive.org/web/20260603133537/https://oag-puntland.pages.dev/ | 2026-06-03T13:35:37Z | 200 |
+| `/en/` | https://web.archive.org/web/20260603133617/https://oag-puntland.pages.dev/en/ | 2026-06-03T13:36:17Z | 200 |
+| `/en/authority/` | (no snapshot — retry post-launch) | — | None |
+| `/en/custody/` | (no snapshot — retry post-launch) | — | 429 |
+| `/en/legislation/` | (no snapshot — retry post-launch) | — | 429 |
+| `/en/legislation/pfm-act-2023/` | (no snapshot — retry post-launch) | — | 429 |
+| `/en/reports/` | (no snapshot — retry post-launch) | — | None |
+| `/en/reports/fy-2023-annual-audit-report/` | (no snapshot — retry post-launch) | — | None |
+| `/en/reports/fy-2024-annual-audit-report/` | (no snapshot — retry post-launch) | — | None |
+| `/en/source-safety/` | (no snapshot — retry post-launch) | — | 429 |
+| `/en/standards/` | (no snapshot — retry post-launch) | — | 429 |
+| `/governance/doctrine.md` | (no snapshot — retry post-launch) | — | None |
+| `/governance/provenance.csv` | (no snapshot — retry post-launch) | — | None |
+| `/so/` | (no snapshot — retry post-launch) | — | None |
+| `/so/custody/` | (no snapshot — retry post-launch) | — | 429 |
+| `/so/legislation/` | (no snapshot — retry post-launch) | — | 429 |
+| `/so/reports/` | (no snapshot — retry post-launch) | — | None |
+| `/so/reports/fy-2023-annual-audit-report/` | (no snapshot — retry post-launch) | — | 429 |
+| `/so/reports/fy-2024-annual-audit-report/` | (no snapshot — retry post-launch) | — | None |
+| `/so/source-safety/` | (no snapshot — retry post-launch) | — | 429 |
+
+### archive.today
+
+| Path | Snapshot | HTTP | Notes |
+|---|---|---|---|
+| `/` | (no snapshot) | 429 | rate-limited or rejected; retry post-launch from different IP |
+| `/en/` | (no snapshot) | 429 | rate-limited or rejected; retry post-launch from different IP |
+| `/en/custody/` | (no snapshot) | 429 | rate-limited or rejected; retry post-launch from different IP |
+| `/en/reports/` | (no snapshot) | 429 | rate-limited or rejected; retry post-launch from different IP |
+| `/en/source-safety/` | (no snapshot) | 429 | rate-limited or rejected; retry post-launch from different IP |
+| `/so/` | (no snapshot) | 429 | rate-limited or rejected; retry post-launch from different IP |
