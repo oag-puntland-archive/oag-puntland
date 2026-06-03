@@ -1,0 +1,43 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t, LOCALES, type Locale } from "@/i18n/strings";
+import legislation from "@/data/legislation.json";
+
+export function getStaticPaths() {
+  return LOCALES.flatMap((lang) =>
+    legislation.map((s: any) => ({ params: { lang, slug: s._slug }, props: { statute: s } }))
+  );
+}
+const lang = Astro.params.lang as Locale;
+const { statute } = Astro.props as { statute: any };
+const doc = statute.document;
+---
+
+<Base lang={lang} title={statute.title.so} section="legislation" pathInLang={`legislation/${statute._slug}`}>
+  <article class="prose">
+    <p style="margin-top: 0.5em;"><a href={`/${lang}/legislation/`}>← {t("nav_legislation", lang)}</a></p>
+    <h1 lang="so">{statute.title.so}</h1>
+    <p lang="en" style="color: var(--c-ink-soft);">
+      {statute.title.en} <em>· {t("legislation_unofficial_translation_marker", lang)}</em>
+    </p>
+
+    <dl class="kv">
+      <dt>{t("legislation_year", lang)}</dt><dd>{statute.year_enacted}</dd>
+      <dt>Role</dt>
+      <dd>{statute.role === "audit-relevant" ? t("legislation_role_audit_relevant", lang) : t("legislation_role_reference", lang)}</dd>
+      {statute.audit_note && <><dt>Note</dt><dd>{statute.audit_note}</dd></>}
+    </dl>
+
+    <h2>{t("legislation_download", lang)}</h2>
+    <article class="card">
+      <div class="actions">
+        <a class="btn" href={doc._public_url} download>{t("legislation_download", lang)} →</a>
+      </div>
+      <dl class="kv" style="margin-top: 1em;">
+        <dt>{t("reports_sha256_label", lang)}</dt><dd><code>{doc.sha256}</code></dd>
+        <dt>{t("reports_bytes_label", lang)}</dt><dd>{doc.bytes.toLocaleString()} B</dd>
+        <dt>{t("reports_fetched_label", lang)}</dt><dd><a href={doc.source_url}>oag.pl.so/downloads</a> ({doc.fetched_utc.slice(0, 10)})</dd>
+      </dl>
+    </article>
+  </article>
+</Base>

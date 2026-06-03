@@ -1,0 +1,482 @@
+[
+  {
+    "id": "24h-revenue-deposit-1999",
+    "type": "legislation",
+    "role": "audit-relevant",
+    "year_enacted": 1999,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Ugudbinta Dakhliga Dawladda ee la Qaado 24-Saac Gudahood Khasnada Dhexe",
+      "en": "24-Hour Revenue Deposit Procedure (MoF)",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "Cash-handling control; relevant to financial-audit testing of revenue cycle.",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 993603,
+      "sha256": "30f9ab5b6696b9546284b94b37e2792a9ccadb7e60087d2f8df31441fb7ad6b7",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Ugudbinta-Dakhliga-Dawladda-ee-la-Qaado-24saac-Gudahood-Khasnada-Dhexe-ee-Berriga-ee-wasaarada-maaliyada.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/24h-revenue-deposit-1999/document.pdf"
+    },
+    "_slug": "24h-revenue-deposit-1999",
+    "_href": "/legislation/24h-revenue-deposit-1999/"
+  },
+  {
+    "id": "airport-tariff-increase-2003",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2003,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Kordhinta Khidmadaha Garoomada Dayuuradaha Puntland",
+      "en": "Airport Services Tariff Increase",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 865019,
+      "sha256": "e31c705c43cbe5e6b1ce7a64f8d31b7bb50886109658e95c3df000f1a1aa0a65",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Kordhinta-Khidmadaha-Garoomada-Dayuuradaha-Puntlan.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/airport-tariff-increase-2003/document.pdf"
+    },
+    "_slug": "airport-tariff-increase-2003",
+    "_href": "/legislation/airport-tariff-increase-2003/"
+  },
+  {
+    "id": "civil-service-commission-law-2019",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2019,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Sharciga Guddiga Shaqaalaha Rayidka Ah ee Dawladda Puntland",
+      "en": "Civil Service Commission Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 6374954,
+      "sha256": "96cd6523f451eab1ecc52423bff9ca0a5fe3d8f7e87ed0e8857d8fa611c7065e",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Sharciga-Guddiga-Shaqaalaha-Rayidka-Ah-ee-Dowladda-Puntland.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/civil-service-commission-law-2019/document.pdf"
+    },
+    "_slug": "civil-service-commission-law-2019",
+    "_href": "/legislation/civil-service-commission-law-2019/"
+  },
+  {
+    "id": "civil-service-law-2018",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2018,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Xeerka Shaqaalaha Rayidka Ah ee Dawladda Puntland",
+      "en": "Puntland Civil Service Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 10530059,
+      "sha256": "ea7c1d6bbca32dc22d9a757d177462bccc437856228142942e00808e94ebcc50",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Shaqaalaha-Rayidka-Ah-ee-Dawladda-Puntland.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/civil-service-law-2018/document.pdf"
+    },
+    "_slug": "civil-service-law-2018",
+    "_href": "/legislation/civil-service-law-2018/"
+  },
+  {
+    "id": "civil-service-pension-amendment-2023",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2023,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Wax-ka-bedelka Xeerka Hawlgabka iyo Liiltirka Shaqaalaha Rayidka ah ee DPL",
+      "en": "Civil Service Pension and Discipline Law (Amendment)",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 11309712,
+      "sha256": "875d3271b8ceae49d105b7c1c13723cb07c217358dad6760e0866ac38d911cff",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Wax-ka-Xeerka-Hawlgabka-iyo-Liiltirka-Shaqaalaha-Rayidka-ah-ee-DPL.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/civil-service-pension-amendment-2023/document.pdf"
+    },
+    "_slug": "civil-service-pension-amendment-2023",
+    "_href": "/legislation/civil-service-pension-amendment-2023/"
+  },
+  {
+    "id": "civil-service-salary-tax-law-2011",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2011,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Xeerka Cashuurta Shaqaalaha Rayidka ah ee Dawladda",
+      "en": "Civil Service Salaries Taxation Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 1488778,
+      "sha256": "6f3d95308c0ecaaa0970bd95130e08e9e1830b391aae292f38ea177719936901",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Xeerka-Cashuurta-Shaqaalaha-Rayidka-ah-ee-Dowladda.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/civil-service-salary-tax-law-2011/document.pdf"
+    },
+    "_slug": "civil-service-salary-tax-law-2011",
+    "_href": "/legislation/civil-service-salary-tax-law-2011/"
+  },
+  {
+    "id": "economic-fund-law-2000",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2000,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Qaanuunka Sanduuqa Dhaqaalaha",
+      "en": "Economic Fund Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 1065372,
+      "sha256": "4a9aff5561af338b6c6ae0154e39ed3274d53a5a5c73d38aa6295c4c81a82bb8",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Qaanuunka-Sanduuqa-Dhaqaalaha-.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/economic-fund-law-2000/document.pdf"
+    },
+    "_slug": "economic-fund-law-2000",
+    "_href": "/legislation/economic-fund-law-2000/"
+  },
+  {
+    "id": "foreign-employees-comp-law-2015",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2015,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Xeerka Khidmada Shaqaalaha Ajaaniibta ah",
+      "en": "Foreign Employees Compensation Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 1342335,
+      "sha256": "43d2c0f86db2c966b2c615a5376ae1c4136c183e4aedb2445889bb704be6ca49",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Khidmada-Shaqaalaha-Ajaaniibta-ah.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/foreign-employees-comp-law-2015/document.pdf"
+    },
+    "_slug": "foreign-employees-comp-law-2015",
+    "_href": "/legislation/foreign-employees-comp-law-2015/"
+  },
+  {
+    "id": "land-and-construction-law-2000",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2000,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Qaanuunka Dhul-Bixinta iyo Dhismaha",
+      "en": "Land Allocation and Construction Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 3102525,
+      "sha256": "1c7355695613ae02bede45dfee1d0f708ff9ee8e722a6eaf3eb9a2f89180d11c",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Qanuunka-Dhul-Bixinta-iyo-Dhismaha.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/land-and-construction-law-2000/document.pdf"
+    },
+    "_slug": "land-and-construction-law-2000",
+    "_href": "/legislation/land-and-construction-law-2000/"
+  },
+  {
+    "id": "local-gov-2pct-levy-2003",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2003,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Kordhinta 2% oo lay Leedahay Wasaaradda Dawladaha Hoose",
+      "en": "2% Local Government Ministry Levy",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 501159,
+      "sha256": "3cd2504da8bbbc7750de4b2281ffb6a2afc8d3d1edb8504260cff4a8204a443a",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-kordhinta-2-oo-lay-leedahay-W.-Dowladaha-Hoose-iy.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/local-gov-2pct-levy-2003/document.pdf"
+    },
+    "_slug": "local-gov-2pct-levy-2003",
+    "_href": "/legislation/local-gov-2pct-levy-2003/"
+  },
+  {
+    "id": "local-gov-revenue-1999",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 1999,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Dakhliga Dawladaha Hoose & Ku-tala-galka Miisaaniyadda Degmooyinka",
+      "en": "Local Government Revenue and District Budget Planning",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 3337561,
+      "sha256": "b6361cd2a426feadb755e5e13c4355a7e68221b2de421e5699236d8530dfd038",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Dakhliga-Dowladaha-Hoose-Ku-tala-galka-Miisaaniyadda-Degmooyi.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/local-gov-revenue-1999/document.pdf"
+    },
+    "_slug": "local-gov-revenue-1999",
+    "_href": "/legislation/local-gov-revenue-1999/"
+  },
+  {
+    "id": "local-gov-revenue-unification-2012",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2012,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Sharciga Midaynta Cashuuraha Dawladaha Hoose ee Puntland",
+      "en": "Local Government Revenue Unification Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 6100468,
+      "sha256": "e1e9b9af3e14a39ac67e56eef1c6232d2cc63ca9c98fc0423b37bd51666e11a3",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Sharciga-Midaynta-Cashuuraha-Dowladaha-Hoose-ee-Pu.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/local-gov-revenue-unification-2012/document.pdf"
+    },
+    "_slug": "local-gov-revenue-unification-2012",
+    "_href": "/legislation/local-gov-revenue-unification-2012/"
+  },
+  {
+    "id": "local-government-law-2023",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2023,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Xeerka Maamulka Gobolada ee Dawladda Hoose",
+      "en": "Local Government Administration Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 21428719,
+      "sha256": "329097b839196c526303960f1eaabf5a1e28600565736fe4434bd7da329ba70b",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/XEER-MAAMULKA-GOBOLADDA.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/local-government-law-2023/document.pdf"
+    },
+    "_slug": "local-government-law-2023",
+    "_href": "/legislation/local-government-law-2023/"
+  },
+  {
+    "id": "notary-and-contract-law-2001",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2001,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Xeerka Nulla Ostada, Diiwaangelinta Heshiisyada",
+      "en": "Notary and Contract Registration Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 1560245,
+      "sha256": "2052f842b174e8c865c5e38a6495ae99439ba40062db8da260bcbd19e998c8ae",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Xeerka-Nulla-Ostada-Diiwaangelinta-Heshiisyada-iy.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/notary-and-contract-law-2001/document.pdf"
+    },
+    "_slug": "notary-and-contract-law-2001",
+    "_href": "/legislation/notary-and-contract-law-2001/"
+  },
+  {
+    "id": "pfm-act-2023",
+    "type": "legislation",
+    "role": "audit-relevant",
+    "year_enacted": 2023,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Xeerka Maamulka Maaliyadda Guud ee DPL",
+      "en": "Public Finance Management Law (Puntland)",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "Most senior currently-public statute touching public-sector audit in Puntland; cited in v1 Authority page in lieu of a yet-unpublished Audit Act.",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 25457591,
+      "sha256": "cb3bc5e341a65ce1e47f0d2cb1e1af0651ea35640131ef7ee415c45ef14addf9",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Maamulka-Maaliyadda-Guud-ee-DPL1.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/pfm-act-2023/document.pdf"
+    },
+    "_slug": "pfm-act-2023",
+    "_href": "/legislation/pfm-act-2023/"
+  },
+  {
+    "id": "port-tariff-increase-2003",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2003,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Kordhinta & Dib-u-habaynta Khidmadaha Dekadaha DG",
+      "en": "Port Services Tariff Increase and Restructuring",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 3410271,
+      "sha256": "78409f10318c42e119c74c614f07ede0fe5f1406962aa26149b5af1046859f84",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Kordhinta-dib-u-habaynta-Khidmadaha-Dekadaha-DG.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/port-tariff-increase-2003/document.pdf"
+    },
+    "_slug": "port-tariff-increase-2003",
+    "_href": "/legislation/port-tariff-increase-2003/"
+  },
+  {
+    "id": "revenue-tax-law-2023",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2023,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Xeerka Cashuuraha Berriga Dawladda Puntland",
+      "en": "Puntland State Revenue Tax Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 37576319,
+      "sha256": "e386ae9da3ccbb8600015f6770b97c5c7bc09c75a5b540ba89dfdfe0c63b85bd",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Cashuuraha-Berriga-Dawladda-Puntland.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/revenue-tax-law-2023/document.pdf"
+    },
+    "_slug": "revenue-tax-law-2023",
+    "_href": "/legislation/revenue-tax-law-2023/"
+  },
+  {
+    "id": "tax-law-amendment-2019",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2019,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Wax-ka-bedelka Xeerka Cashuuraha DPL",
+      "en": "Tax Law Amendment",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 23084855,
+      "sha256": "019008f4d945de07ca6bc6817c8ef02b5413259f3c8bf043dd4d1679725f1c3f",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Wax-ka-bedelka-Xeerka-cashuuraha-DPL.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/tax-law-amendment-2019/document.pdf"
+    },
+    "_slug": "tax-law-amendment-2019",
+    "_href": "/legislation/tax-law-amendment-2019/"
+  },
+  {
+    "id": "tender-and-contract-law-2000",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2000,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Xeerka Tartamada iyo Heshiisyada Qandaraasyada Puntland",
+      "en": "Tender and Contract Law for Puntland",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 2564886,
+      "sha256": "a6d0814d74449fb2b84e5f0888380d7ce03078ed00b2ec49335756959e5ecbec",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Tartamada-iyo-heshiisyada-Qandaraasyada-Puntland.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/tender-and-contract-law-2000/document.pdf"
+    },
+    "_slug": "tender-and-contract-law-2000",
+    "_href": "/legislation/tender-and-contract-law-2000/"
+  },
+  {
+    "id": "urban-land-management-law-2020",
+    "type": "legislation",
+    "role": "reference",
+    "year_enacted": 2020,
+    "publisher": "Puntland State of Somalia (re-hosted by OAG)",
+    "title": {
+      "so": "Xeerka Maaraynta Dhulka Magaalooyinka Dawladda Puntland",
+      "en": "Urban Land Management Law",
+      "en_translation_status": "unofficial-context-translation"
+    },
+    "audit_note": "",
+    "document": {
+      "pdf": "document.pdf",
+      "bytes": 12189901,
+      "sha256": "03545e00d675e97937f3f3f77ecb199e72a211cd6e0882dddb9f22560ce48d1e",
+      "source_url": "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Maaraynta-Dhulka-Magaalooyinka-Dowladda-PL-2020.pdf",
+      "source_landing_page": "https://oag.pl.so/downloads/",
+      "fetched_utc": "2026-06-02T16:10:46+00:00",
+      "_public_url": "/legislation/urban-land-management-law-2020/document.pdf"
+    },
+    "_slug": "urban-land-management-law-2020",
+    "_href": "/legislation/urban-land-management-law-2020/"
+  }
+]

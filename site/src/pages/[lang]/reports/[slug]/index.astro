@@ -1,0 +1,68 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t, LOCALES, type Locale } from "@/i18n/strings";
+import reports from "@/data/reports.json";
+
+export function getStaticPaths() {
+  return LOCALES.flatMap((lang) =>
+    reports.map((r: any) => ({ params: { lang, slug: r._slug }, props: { report: r } }))
+  );
+}
+const lang = Astro.params.lang as Locale;
+const { report } = Astro.props as { report: any };
+
+const realVersions = report.versions.filter((v: any) => v._public_url);
+const pendingVersions = report.versions.filter((v: any) => v.status === "official-translation-pending");
+---
+
+<Base lang={lang} title={report.title[lang]} section="reports" pathInLang={`reports/${report._slug}`}>
+  <article class="prose">
+    <p style="margin-top: 0.5em;"><a href={`/${lang}/reports/`}>← {t("nav_reports", lang)}</a></p>
+    <h1>{report.title[lang]}</h1>
+    <dl class="kv">
+      <dt>{t("reports_issued_label", lang)}</dt><dd>{report.issue_date}</dd>
+      <dt>{t("reports_issuer_label", lang)}</dt><dd>{report.issuer[lang]}</dd>
+      <dt>FY</dt><dd>{report.fiscal_year} (ending {report.fiscal_year_end})</dd>
+    </dl>
+
+    <h2>{t("reports_view_summary", lang)}</h2>
+    <p>{report.summary[lang]}</p>
+
+    <h2>{t("reports_download_pdf", lang)}</h2>
+    {realVersions.map((v: any) => (
+      <article class="card">
+        <h3>
+          {v.lang === "en" ? "English version" : "Daabacaadda Soomaaliga ah"}
+          {" · "}
+          <span style="color: var(--c-ink-soft); font-weight: 400;">{(v.bytes / (1024 * 1024)).toFixed(1)} MB · {v.pages} {t("reports_pages_label", lang)}</span>
+        </h3>
+        <div class="actions">
+          <a class="btn" href={v._public_url} download>
+            {t("reports_download_pdf", lang)} →
+          </a>
+        </div>
+        <dl class="kv" style="margin-top: 1em;">
+          <dt>{t("reports_sha256_label", lang)}</dt><dd><code>{v.sha256}</code></dd>
+          <dt>{t("reports_bytes_label", lang)}</dt><dd>{v.bytes.toLocaleString()} B</dd>
+          <dt>{t("reports_pages_label", lang)}</dt><dd>{v.pages}</dd>
+          <dt>{t("reports_fetched_label", lang)}</dt><dd><a href={v.source_url}>oag.pl.so</a> ({v.fetched_utc.slice(0, 10)})</dd>
+        </dl>
+      </article>
+    ))}
+
+    {pendingVersions.map((v: any) => (
+      <article class="card">
+        <h3>{v.lang === "en" ? "English version" : "Daabacaadda Soomaaliga ah"}</h3>
+        <div class="callout">
+          <p style="margin-bottom: 0;">{v.note[lang]}</p>
+        </div>
+      </article>
+    ))}
+
+    <h2>{t("reports_provenance_label", lang)}</h2>
+    <p style="font-size: 0.92rem; color: var(--c-ink-soft);">
+      This report is republished under the already-public doctrine (governance/doctrine.md §1). Its presence here implies no editorial reinterpretation by this site; the OAG remains the sole author.
+      The SHA-256 of each PDF above is the canonical content fingerprint; the same value appears in <a href="/governance/provenance.csv">/governance/provenance.csv</a>.
+    </p>
+  </article>
+</Base>

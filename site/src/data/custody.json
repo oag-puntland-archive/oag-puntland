@@ -1,0 +1,28 @@
+{
+  "origin_host": "vps.qarandevelopers.so (Amito Ltd UK, AS60610)",
+  "origin_url": "https://oag.pl.so/",
+  "namespace_authority": "Federal Somali Ministry of Post & Telecommunications via soNIC (registry-side controls active on pl.so)",
+  "seizure_assessment": "ASSUMPTION-C-01: FGS can revoke pl.so / oag.pl.so delegation unilaterally; namespace seizure is in-scope.",
+  "mirrors": [
+    {
+      "name": "GitHub",
+      "url": "(pending push)"
+    },
+    {
+      "name": "Codeberg",
+      "url": "(pending push)"
+    }
+  ],
+  "archive_snapshots": [
+    {
+      "name": "Wayback Machine",
+      "url": "(pending snapshot)"
+    },
+    {
+      "name": "archive.today",
+      "url": "(pending snapshot)"
+    }
+  ],
+  "peer_custodian": "(none secured for v1; AFROSAI-E / IDI engagement is post-launch work)",
+  "last_provenance_fetch_utc": "2026-06-02T16:10:46+00:00"
+}

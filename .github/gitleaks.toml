@@ -1,0 +1,21 @@
+# gitleaks config — secret-scan policy for the OAG corpus repo.
+# Defaults are strict; allowlist below covers the structured fields that *look* like secrets
+# but are intentionally part of the public record (sha256 hashes, public URLs).
+
+title = "OAG Puntland — gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Allow content-addressed hashes and provenance URLs that are deliberately public."
+paths = [
+  '''governance/provenance\.csv$''',
+  '''governance/matrix\.csv$''',
+  '''corpus/.*/(report|statute)\.yaml$''',
+  '''site/src/data/.*\.json$''',
+]
+regexes = [
+  # sha256 hex (64 chars) — public content fingerprints, not secrets
+  '''[a-f0-9]{64}''',
+]

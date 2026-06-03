@@ -1,0 +1,48 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t, LOCALES, type Locale } from "@/i18n/strings";
+import custody from "@/data/custody.json";
+export function getStaticPaths() { return LOCALES.map((lang) => ({ params: { lang } })); }
+const lang = Astro.params.lang as Locale;
+---
+<Base lang={lang} title={t("custody_h1", lang)} section="custody" pathInLang="custody">
+  <article class="prose">
+    <h1>{t("custody_h1", lang)}</h1>
+    <p>{t("custody_lede", lang)}</p>
+
+    <dl class="kv">
+      <dt>{t("custody_origin_label", lang)}</dt><dd><a href={custody.origin_url}>{custody.origin_host}</a></dd>
+      <dt>{t("custody_namespace_label", lang)}</dt><dd>{custody.namespace_authority}</dd>
+      <dt>{t("custody_seizure_label", lang)}</dt><dd>{custody.seizure_assessment}</dd>
+      <dt>{t("custody_peer_label", lang)}</dt><dd>{custody.peer_custodian}</dd>
+      <dt>{t("custody_last_snapshot", lang)}</dt><dd><code>{custody.last_provenance_fetch_utc}</code></dd>
+    </dl>
+
+    <h2>{t("custody_mirrors_label", lang)}</h2>
+    <ul>
+      {custody.mirrors.map((m: { name: string; url: string }) => (
+        <li>
+          <strong>{m.name}:</strong>{" "}
+          {m.url.startsWith("http") ? <a href={m.url}>{m.url}</a> : <em>{m.url}</em>}
+        </li>
+      ))}
+    </ul>
+
+    <h2>{t("custody_archive_label", lang)}</h2>
+    <ul>
+      {custody.archive_snapshots.map((s: { name: string; url: string }) => (
+        <li>
+          <strong>{s.name}:</strong>{" "}
+          {s.url.startsWith("http") ? <a href={s.url}>{s.url}</a> : <em>{s.url}</em>}
+        </li>
+      ))}
+    </ul>
+
+    <h2>How to verify the corpus from a clone</h2>
+    <pre><code>git clone &lt;mirror-url&gt; oag-puntland
+cd oag-puntland
+shasum -a 256 corpus/reports/fy-2024-annual-audit-report/en/full.pdf
+# expected: 170d5138e3b863884f98ec76bb46e799b173613de8107d911faa3a7eb6cc74fe
+# any deviation = either a corruption to investigate or tampering</code></pre>
+  </article>
+</Base>

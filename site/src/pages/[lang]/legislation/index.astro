@@ -1,0 +1,69 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t, LOCALES, type Locale } from "@/i18n/strings";
+import legislation from "@/data/legislation.json";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Locale;
+
+const auditRelevant = legislation.filter((s: any) => s.role === "audit-relevant");
+const reference = legislation.filter((s: any) => s.role === "reference");
+
+const sorted = (arr: any[]) => [...arr].sort((a, b) => b.year_enacted - a.year_enacted);
+---
+
+<Base lang={lang} title={t("legislation_h1", lang)} section="legislation" pathInLang="legislation">
+  <article class="wide">
+    <h1>{t("legislation_h1", lang)}</h1>
+    <p style="max-width: var(--w-prose);">{t("legislation_lede", lang)}</p>
+
+    <div class="callout">
+      <p style="margin-bottom: 0;">{t("legislation_audit_act_absent", lang)}</p>
+    </div>
+
+    <section style="margin-top: 2.5rem;">
+      <h2>{t("legislation_role_audit_relevant", lang)}</h2>
+      {sorted(auditRelevant).map((s: any) => (
+        <article class="card">
+          <h3 lang="so">{s.title.so}</h3>
+          <p class="meta" lang="en">
+            {s.title.en} <em>· {t("legislation_unofficial_translation_marker", lang)}</em>
+          </p>
+          <p class="meta">
+            <strong>{t("legislation_year", lang)}:</strong> {s.year_enacted}
+            {s.audit_note && <> · <em>{s.audit_note}</em></>}
+          </p>
+          <div class="actions">
+            <a class="btn" href={`/${lang}/legislation/${s._slug}/`}>{t("reports_view_summary", lang)} →</a>
+            <a class="btn secondary" href={s.document._public_url} download>
+              {t("legislation_download", lang)} · {(s.document.bytes / (1024 * 1024)).toFixed(1)} MB
+            </a>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section style="margin-top: 2.5rem;">
+      <h2>{t("legislation_role_reference", lang)}</h2>
+      {sorted(reference).map((s: any) => (
+        <article class="card">
+          <h3 lang="so">{s.title.so}</h3>
+          <p class="meta" lang="en">
+            {s.title.en} <em>· {t("legislation_unofficial_translation_marker", lang)}</em>
+          </p>
+          <p class="meta">
+            <strong>{t("legislation_year", lang)}:</strong> {s.year_enacted}
+          </p>
+          <div class="actions">
+            <a class="btn secondary" href={`/${lang}/legislation/${s._slug}/`}>{t("reports_view_summary", lang)} →</a>
+            <a class="btn secondary" href={s.document._public_url} download>
+              {t("legislation_download", lang)} · {(s.document.bytes / (1024 * 1024)).toFixed(1)} MB
+            </a>
+          </div>
+        </article>
+      ))}
+    </section>
+  </article>
+</Base>

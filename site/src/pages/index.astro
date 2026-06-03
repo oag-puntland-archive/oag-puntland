@@ -1,0 +1,69 @@
+---
+// Root language chooser. No client-side JS; both options are first-class links.
+import "@/styles/global.css";
+import { LOCALES } from "@/i18n/strings";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Office of the Auditor General — Puntland State of Somalia</title>
+    <meta name="description" content="The verifiable public record of the Office of the Auditor General." />
+    <meta name="theme-color" content="#0d1b2a" />
+    {LOCALES.map((l) => (
+      <link rel="alternate" hreflang={l} href={`/${l}/`} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href="/en/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      .chooser {
+        max-width: 36rem;
+        margin: 4rem auto;
+        padding: 0 1.5rem;
+        text-align: center;
+      }
+      .chooser h1 { font-size: 1.4rem; margin-bottom: 0.4em; }
+      .chooser .sub { color: var(--c-ink-soft); font-size: 0.95rem; margin: 0 0 2.5rem; }
+      .chooser .pick { display: grid; gap: 1rem; }
+      @media (min-width: 36rem) {
+        .chooser .pick { grid-template-columns: 1fr 1fr; }
+      }
+      .chooser .pick a {
+        display: block;
+        padding: 1.4rem 1.2rem;
+        background: var(--c-bg-card);
+        border: 1px solid var(--c-rule);
+        border-radius: var(--radius);
+        text-decoration: none;
+        color: var(--c-ink);
+      }
+      .chooser .pick a:hover { background: var(--c-bg-muted); }
+      .chooser .pick strong { display: block; font-size: 1.15rem; margin-bottom: 0.2em; }
+      .chooser .pick span { color: var(--c-ink-soft); font-size: 0.9rem; }
+      .chooser .note { font-size: 0.85rem; color: var(--c-ink-soft); margin-top: 2.4rem; }
+    </style>
+  </head>
+  <body>
+    <div class="chooser">
+      <h1>Office of the Auditor General · Xafiiska Hantidhawrka Guud</h1>
+      <p class="sub">Puntland State of Somalia · Dowladda Puntland ee Soomaaliya</p>
+      <div class="pick">
+        <a href="/en/" lang="en" hreflang="en">
+          <strong>English</strong>
+          <span>Continue in English →</span>
+        </a>
+        <a href="/so/" lang="so" hreflang="so">
+          <strong>Soomaali</strong>
+          <span>Sii wad afka Soomaaliga →</span>
+        </a>
+      </div>
+      <p class="note">
+        This site republishes only content the OAG has already lawfully made public on oag.pl.so. No new disclosures.
+        <br />
+        Bogganu wuxuu soo daabacaa oo kaliya waxa OAG horey u daabacay si sharci ah ee oag.pl.so. Wax cusub lama daabacin.
+      </p>
+    </div>
+  </body>
+</html>

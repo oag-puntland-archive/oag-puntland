@@ -1,0 +1,73 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t, LOCALES, type Locale } from "@/i18n/strings";
+import reports from "@/data/reports.json";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Locale;
+
+// Categories the OAG names in its current taxonomy. Five are empty in the v1 corpus.
+const CATEGORIES: { key: string; en: string; so: string }[] = [
+  { key: "financial-audit", en: "Financial audit", so: "Baaritaan maaliyadeed" },
+  { key: "compliance-audit", en: "Compliance audit", so: "Baaritaan u-hoggaansanaan" },
+  { key: "systems-audit", en: "Systems audit", so: "Baaritaan nidaamyada" },
+  { key: "donor-funded-audit", en: "Donor-funded project audit", so: "Baaritaan mashruucyo deeq" },
+  { key: "forensic-audit", en: "Forensic audit", so: "Baaritaan forensic" },
+  { key: "programme-audit", en: "Programme audit", so: "Baaritaan barnaamijka" },
+];
+
+function group(catKey: string) {
+  return reports.filter((r: any) => r.issai_category === catKey);
+}
+
+// Sort newest first within a category
+const sorted = (arr: any[]) => [...arr].sort((a, b) => (b.fiscal_year - a.fiscal_year) || (b.issue_date > a.issue_date ? 1 : -1));
+---
+
+<Base lang={lang} title={t("reports_h1", lang)} section="reports" pathInLang="reports">
+  <article class="wide">
+    <h1>{t("reports_h1", lang)}</h1>
+    <p style="max-width: var(--w-prose);">{t("reports_lede", lang)}</p>
+
+    {CATEGORIES.map((cat) => {
+      const items = sorted(group(cat.key));
+      const label = lang === "en" ? cat.en : cat.so;
+      return (
+        <section style="margin-top: 2.5rem;">
+          <h2>{label}</h2>
+          {items.length === 0 ? (
+            <p style="color: var(--c-ink-soft); font-style: italic;">{t("reports_empty_category", lang)}</p>
+          ) : (
+            items.map((r: any) => (
+              <article class="card">
+                <h3>{r.title[lang]}</h3>
+                <p class="meta">
+                  <strong>{t("reports_issued_label", lang)}:</strong>{" "}
+                  {r.issue_date} ·{" "}
+                  <strong>{t("reports_issuer_label", lang)}:</strong>{" "}
+                  {r.issuer[lang]}
+                </p>
+                <p>{r.summary[lang]}</p>
+                <div class="actions">
+                  <a class="btn" href={`/${lang}/reports/${r._slug}/`}>{t("reports_view_summary", lang)} →</a>
+                  {r.versions.filter((v: any) => v._public_url).map((v: any) => (
+                    <a class="btn secondary" href={v._public_url} download>
+                      {t("reports_download_pdf", lang)} ({v.lang.toUpperCase()}) · {(v.bytes / (1024 * 1024)).toFixed(1)} MB
+                    </a>
+                  ))}
+                </div>
+                {r.versions.some((v: any) => v.status === "official-translation-pending") && (
+                  <p class="meta" style="margin-top: 0.8em; font-style: italic;">
+                    {t("reports_official_translation_pending", lang)}
+                  </p>
+                )}
+              </article>
+            ))
+          )}
+        </section>
+      );
+    })}
+  </article>
+</Base>

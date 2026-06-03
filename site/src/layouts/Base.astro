@@ -1,0 +1,87 @@
+---
+import "../styles/global.css";
+import { t, HTML_LANG, LOCALES, type Locale } from "@/i18n/strings";
+import Footer from "@/components/Footer.astro";
+import LangSwitch from "@/components/LangSwitch.astro";
+
+interface Props {
+  lang: Locale;
+  title: string;
+  description?: string;
+  /** path inside /{lang}/, e.g. "reports" or "reports/fy-2024-annual-audit-report" */
+  pathInLang?: string;
+  /** Used to mark active nav item; matches the top-level section. */
+  section?: "home" | "about" | "authority" | "methodology" | "standards" | "reports" | "legislation" | "source-safety" | "custody" | "contact";
+}
+
+const { lang, title, description, pathInLang = "", section } = Astro.props;
+const fullTitle = `${title} · ${t("institution_short", lang)}`;
+const desc = description ?? t("tagline", lang);
+
+const navItems: { key: string; href: string; section: NonNullable<Props["section"]> }[] = [
+  { key: "nav_home", href: `/${lang}/`, section: "home" },
+  { key: "nav_reports", href: `/${lang}/reports/`, section: "reports" },
+  { key: "nav_legislation", href: `/${lang}/legislation/`, section: "legislation" },
+  { key: "nav_about", href: `/${lang}/about/`, section: "about" },
+  { key: "nav_authority", href: `/${lang}/authority/`, section: "authority" },
+  { key: "nav_methodology", href: `/${lang}/methodology/`, section: "methodology" },
+  { key: "nav_standards", href: `/${lang}/standards/`, section: "standards" },
+  { key: "nav_source_safety", href: `/${lang}/source-safety/`, section: "source-safety" },
+  { key: "nav_custody", href: `/${lang}/custody/`, section: "custody" },
+  { key: "nav_contact", href: `/${lang}/contact/`, section: "contact" },
+];
+
+// For the LangSwitch, derive the *other* language URL by swapping the lang prefix.
+const otherLang: Locale = lang === "en" ? "so" : "en";
+const otherUrl = `/${otherLang}/${pathInLang}${pathInLang && !pathInLang.endsWith("/") ? "/" : ""}`;
+---
+
+<!doctype html>
+<html lang={HTML_LANG[lang]}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <meta name="theme-color" content="#0d1b2a" />
+    <meta name="generator" content="Astro static (no JS)" />
+    {LOCALES.map((l) => (
+      <link
+        rel="alternate"
+        hreflang={HTML_LANG[l]}
+        href={`/${l}/${pathInLang}${pathInLang && !pathInLang.endsWith("/") ? "/" : ""}`}
+      />
+    ))}
+    <link rel="canonical" href={`/${lang}/${pathInLang}${pathInLang && !pathInLang.endsWith("/") ? "/" : ""}`} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="inner">
+        <a class="brand" href={`/${lang}/`}>
+          <span class="brand-name">{t("institution", lang)}</span>
+          <span class="brand-sub">{t("tagline", lang)}</span>
+        </a>
+        <LangSwitch lang={lang} otherUrl={otherUrl} />
+      </div>
+      <nav class="site-nav" aria-label={t("nav_home", lang)}>
+        <div class="inner" style="padding-top: 0; padding-bottom: 0.6rem; max-width: var(--w-wide); margin: 0 auto; width: 100%;">
+          {navItems.map((it) => (
+            <a
+              href={it.href}
+              aria-current={section === it.section ? "page" : undefined}
+            >
+              {t(it.key, lang)}
+            </a>
+          ))}
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

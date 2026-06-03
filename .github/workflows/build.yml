@@ -1,0 +1,102 @@
+name: build
+
+# Quality gates for every push and PR to main.
+# - Builds the site from corpus + site source
+# - Verifies reproducibility (two builds → byte-identical dist)
+# - Scans the corpus for any artifact lacking a provenance row
+# - Lints internal links in dist
+# - Uploads dist as an artifact (downstream Cloudflare Pages picks it up via GitHub integration,
+#   or it can be downloaded for manual deploy)
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  SOURCE_DATE_EPOCH: 1717344000
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: "10.24.0"
+          run_install: false
+
+      - name: Install (site/)
+        working-directory: site
+        run: pnpm install --frozen-lockfile
+
+      - name: Provenance integrity check
+        run: |
+          python3 - <<'PY'
+          import csv, hashlib, sys, pathlib
+          root = pathlib.Path(".")
+          rows = list(csv.DictReader(open("governance/provenance.csv")))
+          declared = {r["sha256"]: r for r in rows}
+          missing, mismatch = [], []
+          for pdf in root.glob("corpus/**/*.pdf"):
+              actual = hashlib.sha256(pdf.read_bytes()).hexdigest()
+              if actual not in declared:
+                  missing.append((str(pdf), actual))
+              else:
+                  exp = declared[actual]
+                  # cross-check artifact path roughly
+                  if pdf.name not in exp["source_url"] and pdf.name not in exp["artifact_path"]:
+                      mismatch.append((str(pdf), actual, exp["artifact_path"]))
+          if missing:
+              print("ERROR: artifacts present in corpus/ but not in governance/provenance.csv:")
+              for m in missing: print(f"  {m[0]}  sha256={m[1]}")
+              sys.exit(1)
+          if mismatch:
+              print("WARNING: provenance path mismatch (review):")
+              for m in mismatch: print(f"  {m[0]}  expected_artifact_path={m[2]}")
+          print(f"OK: {len(rows)} provenance rows · {sum(1 for _ in root.glob('corpus/**/*.pdf'))} PDFs in corpus, all accounted for")
+          PY
+
+      - name: Ingest + build
+        working-directory: site
+        run: pnpm run prebuild && pnpm exec astro build
+
+      - name: Reproducibility two-pass check
+        run: bash scripts/reproducibility-check.sh
+
+      - name: Internal link check
+        run: node scripts/link-check.mjs
+
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          config-path: .github/gitleaks.toml
+        continue-on-error: false
+        env:
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: site/dist
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Build summary
+        run: |
+          echo "::notice title=Build OK::Site built reproducibly. dist available as artifact 'site-dist'."
+          echo "Total HTML pages: $(find site/dist -name '*.html' | wc -l)"
+          echo "Total PDF files:  $(find site/dist -name '*.pdf' | wc -l)"
+          echo "dist size:        $(du -sh site/dist | cut -f1)"

@@ -1,0 +1,32 @@
+{
+  "name": "oag-puntland-site",
+  "version": "1.0.0-v1",
+  "type": "module",
+  "private": true,
+  "description": "Static bilingual (EN/SO) site for the OAG Puntland public accountability platform. Source of truth is ../corpus; site is a derivative.",
+  "scripts": {
+    "ingest": "node ../scripts/ingest.mjs",
+    "prebuild": "node ../scripts/ingest.mjs",
+    "dev": "astro dev --host 127.0.0.1 --port 4321",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1 --port 4322",
+    "check": "astro check",
+    "lint:links": "node ../scripts/link-check.mjs",
+    "reproducibility-check": "bash ../scripts/reproducibility-check.sh",
+    "a11y": "node ../scripts/a11y-check.mjs",
+    "lighthouse:2g": "node ../scripts/lighthouse-2g.mjs"
+  },
+  "dependencies": {
+    "astro": "5.6.1",
+    "@astrojs/sitemap": "3.2.1",
+    "@astrojs/check": "0.9.4",
+    "typescript": "5.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.16.11"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

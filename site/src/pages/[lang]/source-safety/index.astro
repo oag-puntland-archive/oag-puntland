@@ -1,0 +1,33 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t, LOCALES, type Locale } from "@/i18n/strings";
+export function getStaticPaths() { return LOCALES.map((lang) => ({ params: { lang } })); }
+const lang = Astro.params.lang as Locale;
+---
+<Base lang={lang} title={t("source_safety_h1", lang)} section="source-safety" pathInLang="source-safety">
+  <article class="prose">
+    <h1>{t("source_safety_h1", lang)}</h1>
+    <p style="font-size: 1.05rem; color: var(--c-ink-soft);">{t("source_safety_subtitle", lang)}</p>
+
+    <div class="callout">
+      <h3 style="margin-top: 0;">{t("source_safety_what_we_cannot", lang)}</h3>
+      <p style="margin-bottom: 0;">{t("source_safety_what_we_cannot_body", lang)}</p>
+    </div>
+
+    <h2>{t("source_safety_what_we_can", lang)}</h2>
+    <p>{t("source_safety_what_we_can_body", lang)}</p>
+
+    <h2>{t("source_safety_paper_route", lang)}</h2>
+    <p>{t("source_safety_paper_route_body", lang)}</p>
+    <article class="card" style="text-align: center;">
+      <p set:html={t("source_safety_paper_address_html", lang)} />
+    </article>
+
+    <h2>{t("source_safety_no_digital", lang)}</h2>
+    <p>{t("source_safety_no_digital_body", lang)}</p>
+
+    <div class="callout info">
+      <p style="margin: 0;">{t("source_safety_consult_lawyer", lang)}</p>
+    </div>
+  </article>
+</Base>

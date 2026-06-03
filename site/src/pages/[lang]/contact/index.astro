@@ -1,0 +1,28 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t, LOCALES, type Locale } from "@/i18n/strings";
+export function getStaticPaths() { return LOCALES.map((lang) => ({ params: { lang } })); }
+const lang = Astro.params.lang as Locale;
+---
+<Base lang={lang} title={t("contact_h1", lang)} section="contact" pathInLang="contact">
+  <article class="prose">
+    <h1>{t("contact_h1", lang)}</h1>
+    <h2>{t("contact_official_label", lang)}</h2>
+    <dl class="kv">
+      <dt>{t("contact_email_label", lang)}</dt><dd><a href="mailto:oag@plstate.so">oag@plstate.so</a></dd>
+      <dt>{t("contact_phone_label", lang)}</dt><dd><a href="tel:+252905813333">+252 90 581 3333</a></dd>
+      <dt>{t("contact_address_label", lang)}</dt><dd>Garowe, Puntland State of Somalia</dd>
+      <dt>{t("contact_site_label", lang)}</dt><dd><a href="https://oag.pl.so/">oag.pl.so</a></dd>
+    </dl>
+
+    <div class="callout info">
+      <h3 style="margin-top: 0;">{t("contact_archival_label", lang)}</h3>
+      <p style="margin: 0;">{t("contact_archival_body", lang)}</p>
+    </div>
+
+    <p style="margin-top: 2em;">
+      <a href={`/${lang}/source-safety/`}>→ {t("nav_source_safety", lang)}</a><br />
+      <a href={`/${lang}/custody/`}>→ {t("nav_custody", lang)}</a>
+    </p>
+  </article>
+</Base>

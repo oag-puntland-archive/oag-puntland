@@ -1,0 +1,55 @@
+---
+import { t, type Locale } from "@/i18n/strings";
+import custody from "@/data/custody.json";
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="inner">
+    <section>
+      <h4>{t("footer_mirrors_label", lang)}</h4>
+      <p>{t("footer_built_from", lang)}</p>
+      <ul style="padding-left: 1.1em; margin: 0.6em 0 0;">
+        {custody.mirrors.map((m: { name: string; url: string }) => (
+          <li>
+            <strong>{m.name}:</strong>{" "}
+            {m.url.startsWith("http") ? <a href={m.url}>{m.url}</a> : <em>{m.url}</em>}
+          </li>
+        ))}
+      </ul>
+    </section>
+    <section>
+      <h4>{t("footer_archive_label", lang)}</h4>
+      <ul style="padding-left: 1.1em; margin: 0;">
+        {custody.archive_snapshots.map((s: { name: string; url: string }) => (
+          <li>
+            <strong>{s.name}:</strong>{" "}
+            {s.url.startsWith("http") ? <a href={s.url}>{s.url}</a> : <em>{s.url}</em>}
+          </li>
+        ))}
+      </ul>
+    </section>
+    <section>
+      <h4>{t("nav_custody", lang)}</h4>
+      <p><a href={`/${lang}/custody/`}>{t("nav_custody", lang)} →</a></p>
+      <p><a href={`/${lang}/source-safety/`}>{t("nav_source_safety", lang)} →</a></p>
+      <p><a href={`/${lang}/standards/`}>{t("nav_standards", lang)} →</a></p>
+    </section>
+    <section>
+      <h4>Source corpus</h4>
+      <p>
+        <a href="/governance/doctrine.md">{t("footer_doctrine_link", lang)} →</a>
+      </p>
+      <p>
+        <a href="/governance/provenance.csv">{t("footer_provenance_link", lang)} →</a>
+      </p>
+    </section>
+  </div>
+  <div class="legalese">
+    <p>{t("footer_independence_note", lang)}</p>
+  </div>
+</footer>

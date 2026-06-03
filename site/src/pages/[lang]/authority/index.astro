@@ -1,0 +1,27 @@
+---
+import Base from "@/layouts/Base.astro";
+import { t, LOCALES, type Locale } from "@/i18n/strings";
+export function getStaticPaths() { return LOCALES.map((lang) => ({ params: { lang } })); }
+const lang = Astro.params.lang as Locale;
+---
+<Base lang={lang} title={t("authority_h1", lang)} section="authority" pathInLang="authority">
+  <article class="prose">
+    <h1>{t("authority_h1", lang)}</h1>
+    <p>{t("authority_intro", lang)}</p>
+
+    <h2>{t("authority_h_currently_public", lang)}</h2>
+    <p>{t("authority_currently_public_body", lang)}</p>
+    <p>
+      <a class="btn secondary" href={`/${lang}/legislation/pfm-act-2023/`}>
+        Xeerka Maamulka Maaliyadda Guud (PFM Law) 2023 →
+      </a>
+    </p>
+
+    <h2>{t("authority_h_pending", lang)}</h2>
+    <p>{t("authority_pending_body", lang)}</p>
+
+    <h2>{t("authority_h_gap_handling", lang)}</h2>
+    <p>{t("authority_gap_handling_body", lang)}</p>
+    <p><a href={`/${lang}/standards/`}>→ {t("nav_standards", lang)}</a></p>
+  </article>
+</Base>
