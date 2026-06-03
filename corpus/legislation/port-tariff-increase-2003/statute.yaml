@@ -1,0 +1,17 @@
+id: port-tariff-increase-2003
+type: legislation
+role: reference
+year_enacted: 2003
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Kordhinta & Dib-u-habaynta Khidmadaha Dekadaha DG
+  en: Port Services Tariff Increase and Restructuring
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 3410271
+  sha256: 78409f10318c42e119c74c614f07ede0fe5f1406962aa26149b5af1046859f84
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Kordhinta-dib-u-habaynta-Khidmadaha-Dekadaha-DG.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

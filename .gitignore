@@ -1,0 +1,19 @@
+# transient research / staging — never committed
+_inventory/
+node_modules/
+.pnpm-store/
+.cache/
+.DS_Store
+
+# Astro build output (deterministic from corpus)
+site/dist/
+site/.astro/
+
+# secrets
+.env
+.env.*
+
+# editor noise
+.idea/
+.vscode/
+*.swp

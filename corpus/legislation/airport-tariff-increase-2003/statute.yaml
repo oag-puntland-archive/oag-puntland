@@ -1,0 +1,17 @@
+id: airport-tariff-increase-2003
+type: legislation
+role: reference
+year_enacted: 2003
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Kordhinta Khidmadaha Garoomada Dayuuradaha Puntland
+  en: Airport Services Tariff Increase
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 865019
+  sha256: e31c705c43cbe5e6b1ce7a64f8d31b7bb50886109658e95c3df000f1a1aa0a65
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Kordhinta-Khidmadaha-Garoomada-Dayuuradaha-Puntlan.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

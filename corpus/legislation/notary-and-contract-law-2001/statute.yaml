@@ -1,0 +1,17 @@
+id: notary-and-contract-law-2001
+type: legislation
+role: reference
+year_enacted: 2001
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Xeerka Nulla Ostada, Diiwaangelinta Heshiisyada
+  en: Notary and Contract Registration Law
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 1560245
+  sha256: 2052f842b174e8c865c5e38a6495ae99439ba40062db8da260bcbd19e998c8ae
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Xeerka-Nulla-Ostada-Diiwaangelinta-Heshiisyada-iy.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

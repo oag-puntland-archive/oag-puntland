@@ -1,0 +1,32 @@
+id: fy-2023-annual-audit-report
+type: annual-audit-report
+issai_category: financial-audit
+fiscal_year: 2023
+fiscal_year_end: 2023-12-31
+issue_date: 2024-06-30
+issuer:
+  en: Office of the Auditor General, Puntland State of Somalia
+  so: Xafiiska Hantidhawrka Guud, Dowladda Puntland ee Somaliya
+auditee:
+  en: Government of Puntland State of Somalia
+  so: Dowladda Puntland ee Somaliya
+title:
+  en: Annual Audit Report on the Public Accounts of Puntland State of Somalia (For The Year End 31 December 2023)
+  so: Warbixinta Baarista Xisaab-Xirka Guud ee Dawladda Puntland (Sannad Maaliyadeedka Dhammaaday 31da Diseembar 2023)
+summary:
+  en: Official English version not yet published by the OAG; the Somali edition is authoritative. The 2023 Annual Audit Report on the public accounts of Puntland State was prepared by the OAG and published 30 June 2024.
+  so: Warbixinta Xisaab-xirka Sanadlaha ee Dawladda Puntland ee 2023, oo la daabacay Juun 30, 2024, waxaa diyaariyay Xafiiska Hantidhawrka Guud (XHG). Warbixintani waxay daboolaysaa sanad-miisaaniyeedka dhammaaday Diseembar 31, 2023, iyadoo qiimaynaysa saxnaanta xisaabaadka uu diyaariyay Xafiiska Xisaabiyaha Guud.
+versions:
+  - lang: so
+    pdf: so/full.pdf
+    pages: 42
+    bytes: 42543525
+    sha256: 2789ce1f07f21933f2d5dbaccca5cda38665685cdc41769f3a64ae9ce1ed8453
+    source_url: "https://oag.pl.so/wp-content/uploads/2025/07/Warbixinta-Xisaab-Xirka-2023_Hantidhawrka-Guud.pdf"
+    source_landing_page: "https://oag.pl.so/audit-reports/financial-audits/fy-2023-annual-audit-report-somali-version-copy-2/"
+    fetched_utc: "2026-06-02T16:10:46+00:00"
+  - lang: en
+    status: official-translation-pending
+    note:
+      en: Official English version not published as of the v1 corpus snapshot. The Somali edition above is authoritative. The OAG does not auto-translate financial findings.
+      so: Daabacaadda rasmiga ah ee Ingiriisida weli lama daabicin. Daabacaadda Soomaaliga ah waa tan rasmiga ah.

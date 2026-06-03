@@ -1,0 +1,17 @@
+id: economic-fund-law-2000
+type: legislation
+role: reference
+year_enacted: 2000
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Qaanuunka Sanduuqa Dhaqaalaha
+  en: Economic Fund Law
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 1065372
+  sha256: 4a9aff5561af338b6c6ae0154e39ed3274d53a5a5c73d38aa6295c4c81a82bb8
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Qaanuunka-Sanduuqa-Dhaqaalaha-.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

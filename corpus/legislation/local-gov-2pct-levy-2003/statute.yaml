@@ -1,0 +1,17 @@
+id: local-gov-2pct-levy-2003
+type: legislation
+role: reference
+year_enacted: 2003
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Kordhinta 2% oo lay Leedahay Wasaaradda Dawladaha Hoose
+  en: 2% Local Government Ministry Levy
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 501159
+  sha256: 3cd2504da8bbbc7750de4b2281ffb6a2afc8d3d1edb8504260cff4a8204a443a
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-kordhinta-2-oo-lay-leedahay-W.-Dowladaha-Hoose-iy.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

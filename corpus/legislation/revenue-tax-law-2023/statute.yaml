@@ -1,0 +1,17 @@
+id: revenue-tax-law-2023
+type: legislation
+role: reference
+year_enacted: 2023
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Xeerka Cashuuraha Berriga Dawladda Puntland
+  en: Puntland State Revenue Tax Law
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 37576319
+  sha256: e386ae9da3ccbb8600015f6770b97c5c7bc09c75a5b540ba89dfdfe0c63b85bd
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Cashuuraha-Berriga-Dawladda-Puntland.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

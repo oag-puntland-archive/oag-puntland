@@ -1,0 +1,17 @@
+id: civil-service-salary-tax-law-2011
+type: legislation
+role: reference
+year_enacted: 2011
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Xeerka Cashuurta Shaqaalaha Rayidka ah ee Dawladda
+  en: Civil Service Salaries Taxation Law
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 1488778
+  sha256: 6f3d95308c0ecaaa0970bd95130e08e9e1830b391aae292f38ea177719936901
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Kuna-Saabsan-Xeerka-Cashuurta-Shaqaalaha-Rayidka-ah-ee-Dowladda.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

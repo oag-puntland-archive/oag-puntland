@@ -1,0 +1,17 @@
+id: civil-service-commission-law-2019
+type: legislation
+role: reference
+year_enacted: 2019
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Sharciga Guddiga Shaqaalaha Rayidka Ah ee Dawladda Puntland
+  en: Civil Service Commission Law
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 6374954
+  sha256: 96cd6523f451eab1ecc52423bff9ca0a5fe3d8f7e87ed0e8857d8fa611c7065e
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Sharciga-Guddiga-Shaqaalaha-Rayidka-Ah-ee-Dowladda-Puntland.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

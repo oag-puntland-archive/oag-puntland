@@ -1,0 +1,17 @@
+id: foreign-employees-comp-law-2015
+type: legislation
+role: reference
+year_enacted: 2015
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Xeerka Khidmada Shaqaalaha Ajaaniibta ah
+  en: Foreign Employees Compensation Law
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 1342335
+  sha256: 43d2c0f86db2c966b2c615a5376ae1c4136c183e4aedb2445889bb704be6ca49
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Khidmada-Shaqaalaha-Ajaaniibta-ah.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

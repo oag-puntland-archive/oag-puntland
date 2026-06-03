@@ -1,0 +1,17 @@
+id: tax-law-amendment-2019
+type: legislation
+role: reference
+year_enacted: 2019
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Wax-ka-bedelka Xeerka Cashuuraha DPL
+  en: Tax Law Amendment
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 23084855
+  sha256: 019008f4d945de07ca6bc6817c8ef02b5413259f3c8bf043dd4d1679725f1c3f
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Wax-ka-bedelka-Xeerka-cashuuraha-DPL.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

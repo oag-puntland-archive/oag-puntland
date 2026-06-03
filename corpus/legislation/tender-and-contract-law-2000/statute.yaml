@@ -1,0 +1,17 @@
+id: tender-and-contract-law-2000
+type: legislation
+role: reference
+year_enacted: 2000
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Xeerka Tartamada iyo Heshiisyada Qandaraasyada Puntland
+  en: Tender and Contract Law for Puntland
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 2564886
+  sha256: a6d0814d74449fb2b84e5f0888380d7ce03078ed00b2ec49335756959e5ecbec
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Tartamada-iyo-heshiisyada-Qandaraasyada-Puntland.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

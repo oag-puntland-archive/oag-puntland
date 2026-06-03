@@ -1,0 +1,17 @@
+id: local-gov-revenue-1999
+type: legislation
+role: reference
+year_enacted: 1999
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Dakhliga Dawladaha Hoose & Ku-tala-galka Miisaaniyadda Degmooyinka
+  en: Local Government Revenue and District Budget Planning
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 3337561
+  sha256: b6361cd2a426feadb755e5e13c4355a7e68221b2de421e5699236d8530dfd038
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Dakhliga-Dowladaha-Hoose-Ku-tala-galka-Miisaaniyadda-Degmooyi.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

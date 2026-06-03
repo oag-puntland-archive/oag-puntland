@@ -1,0 +1,35 @@
+id: fy-2024-annual-audit-report
+type: annual-audit-report
+issai_category: financial-audit
+fiscal_year: 2024
+fiscal_year_end: 2024-12-31
+issue_date: 2025-06-30
+issuer:
+  en: Office of the Auditor General, Puntland State of Somalia
+  so: Xafiiska Hantidhawrka Guud, Dowladda Puntland ee Somaliya
+auditee:
+  en: Government of Puntland State of Somalia
+  so: Dowladda Puntland ee Somaliya
+title:
+  en: The Audited Annual Financial Statements of Puntland State of Somalia (For The Year End 31 December 2024)
+  so: Warbixinta Baarista Xisaab-Xirka Guud ee Dawladda Puntland (Sannad Maaliyadeedka Dhammaaday 31da Diseembar 2024)
+summary:
+  en: The 2024 Annual Financial Statements Audit Report of the Puntland Government, published on June 30, 2025, was prepared by the Office of the Auditor General (OAG). The report covers the fiscal year ending December 31, 2024, and assesses the accuracy of the accounts prepared by the Office of the Accountant General.
+  so: Warbixinta Xisaab-xirka Sanadlaha ee Dawladda Puntland ee 2024, oo la daabacay Juun 30, 2025, waxaa diyaariyay Xafiiska Hantidhawrka Guud (XHG). Warbixintani waxay daboolaysaa sanad-miisaaniyeedka dhammaaday Diseembar 31, 2024, iyadoo qiimaynaysa saxnaanta xisaabaadka uu diyaariyay Xafiiska Xisaabiyaha Guud.
+versions:
+  - lang: en
+    pdf: en/full.pdf
+    pages: 43
+    bytes: 7554836
+    sha256: 170d5138e3b863884f98ec76bb46e799b173613de8107d911faa3a7eb6cc74fe
+    source_url: "https://oag.pl.so/wp-content/uploads/2026/01/Final-Audited-Annual-Financial-Statements-2024-Eng-Version-1.pdf"
+    source_landing_page: "https://oag.pl.so/audit-reports/financial-audits/fy-2024-annual-audit-report-somali-version-copy/"
+    fetched_utc: "2026-06-02T16:10:46+00:00"
+  - lang: so
+    pdf: so/full.pdf
+    pages: 43
+    bytes: 7564266
+    sha256: 8cb096ae50916813410196cd68b72c19ad9d006312cc43861baec46766785f04
+    source_url: "https://oag.pl.so/wp-content/uploads/2025/07/Warbixinta-Hantidhawrka-ee-Xisaab-Xirka-Dawladda-2024.pdf"
+    source_landing_page: "https://oag.pl.so/audit-reports/financial-audits/fy-2023-annual-audit-report-somali-version-copy/"
+    fetched_utc: "2026-06-02T16:10:46+00:00"

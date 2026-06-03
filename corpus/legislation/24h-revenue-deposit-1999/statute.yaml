@@ -1,0 +1,17 @@
+id: 24h-revenue-deposit-1999
+type: legislation
+role: audit-relevant
+year_enacted: 1999
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Ugudbinta Dakhliga Dawladda ee la Qaado 24-Saac Gudahood Khasnada Dhexe
+  en: 24-Hour Revenue Deposit Procedure (MoF)
+  en_translation_status: unofficial-context-translation
+audit_note: Cash-handling control; relevant to financial-audit testing of revenue cycle.
+document:
+  pdf: document.pdf
+  bytes: 993603
+  sha256: 30f9ab5b6696b9546284b94b37e2792a9ccadb7e60087d2f8df31441fb7ad6b7
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Ugudbinta-Dakhliga-Dawladda-ee-la-Qaado-24saac-Gudahood-Khasnada-Dhexe-ee-Berriga-ee-wasaarada-maaliyada.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

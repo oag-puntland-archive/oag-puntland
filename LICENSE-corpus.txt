@@ -1,0 +1,5 @@
+Corpus content — already-public re-publication.
+
+All PDF artifacts in `corpus/` are republications of documents the Office of the Auditor General, Puntland State of Somalia has already made public on https://oag.pl.so. Republication terms follow the OAG's own publication terms; consult the OAG directly for redistribution permissions outside fair use, academic citation, and archival purposes.
+
+The structured metadata (YAML files) and provenance ledger are released under CC0 1.0 Universal (public domain).

@@ -1,0 +1,17 @@
+id: land-and-construction-law-2000
+type: legislation
+role: reference
+year_enacted: 2000
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Qaanuunka Dhul-Bixinta iyo Dhismaha
+  en: Land Allocation and Construction Law
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 3102525
+  sha256: 1c7355695613ae02bede45dfee1d0f708ff9ee8e722a6eaf3eb9a2f89180d11c
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Qanuunka-Dhul-Bixinta-iyo-Dhismaha.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

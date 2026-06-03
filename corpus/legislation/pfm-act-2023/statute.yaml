@@ -1,0 +1,17 @@
+id: pfm-act-2023
+type: legislation
+role: audit-relevant
+year_enacted: 2023
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Xeerka Maamulka Maaliyadda Guud ee DPL
+  en: Public Finance Management Law (Puntland)
+  en_translation_status: unofficial-context-translation
+audit_note: Most senior currently-public statute touching public-sector audit in Puntland; cited in v1 Authority page in lieu of a yet-unpublished Audit Act.
+document:
+  pdf: document.pdf
+  bytes: 25457591
+  sha256: cb3bc5e341a65ce1e47f0d2cb1e1af0651ea35640131ef7ee415c45ef14addf9
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/Xeerka-Maamulka-Maaliyadda-Guud-ee-DPL1.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"

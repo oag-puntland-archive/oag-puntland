@@ -1,0 +1,17 @@
+id: local-government-law-2023
+type: legislation
+role: reference
+year_enacted: 2023
+publisher: Puntland State of Somalia (re-hosted by OAG)
+title:
+  so: Xeerka Maamulka Gobolada ee Dawladda Hoose
+  en: Local Government Administration Law
+  en_translation_status: unofficial-context-translation
+audit_note: ""
+document:
+  pdf: document.pdf
+  bytes: 21428719
+  sha256: 329097b839196c526303960f1eaabf5a1e28600565736fe4434bd7da329ba70b
+  source_url: "https://oag.pl.so/wp-content/uploads/2025/05/XEER-MAAMULKA-GOBOLADDA.pdf"
+  source_landing_page: "https://oag.pl.so/downloads/"
+  fetched_utc: "2026-06-02T16:10:46+00:00"
