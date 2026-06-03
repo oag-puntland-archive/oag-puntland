@@ -1,0 +1,34 @@
+{
+  "$comment": "Source of truth for the public mirror URLs and archive baseline. Committed (not env-var) so every build reproduces the same custody snapshot. To add/rotate a mirror, edit this file and commit; ingest.mjs picks it up automatically. To remove a mirror, set its url to null.",
+  "mirrors": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/oag-puntland-archive/oag-puntland",
+      "jurisdiction": "US (Delaware-incorporated, US legal compulsion applies)"
+    },
+    {
+      "name": "Codeberg",
+      "url": "https://codeberg.org/Abdirahim/oag-puntland",
+      "jurisdiction": "DE (non-profit, German law applies)"
+    }
+  ],
+  "archive_snapshots": [
+    {
+      "name": "Wayback Machine",
+      "url": "https://web.archive.org/web/20260603072345/https://oag.pl.so/",
+      "captured_utc": "2026-06-03T07:23:45Z",
+      "subject": "defensive baseline of origin oag.pl.so"
+    },
+    {
+      "name": "archive.today",
+      "url": null,
+      "captured_utc": null,
+      "note": "submission attempted 2026-06-03 returned HTTP 429; retry post-launch from different IP"
+    }
+  ],
+  "peer_custodian": {
+    "name": null,
+    "url": null,
+    "note": "no AFROSAI-E / IDI / academic / CSO peer custodian secured for v1; engagement targets documented in governance/custody.md §5"
+  }
+}

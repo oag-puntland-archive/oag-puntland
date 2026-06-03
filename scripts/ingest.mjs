@@ -244,22 +244,25 @@ async function main() {
   console.log("[ingest] governance/ exposed as static");
 
   // ---- Custody snapshot (for the /custody/ page render) ----
+  // Read mirrors + archive snapshots from governance/mirrors.json (committed source of truth).
+  // No env-var dependency: every build (local, CI, Cloudflare, future clone) produces the same custody data.
+  const mirrorsConfig = JSON.parse(
+    await readFile(resolve(ROOT, "governance", "mirrors.json"), "utf-8"),
+  );
   const custody = {
     origin_host: "vps.qarandevelopers.so (Amito Ltd UK, AS60610)",
     origin_url: "https://oag.pl.so/",
     namespace_authority: "Federal Somali Ministry of Post & Telecommunications via soNIC (registry-side controls active on pl.so)",
     seizure_assessment:
       "ASSUMPTION-C-01: FGS can revoke pl.so / oag.pl.so delegation unilaterally; namespace seizure is in-scope.",
-    mirrors: [
-      // Populated post-launch when push completes. Build does not fail on empty mirrors.
-      { name: "GitHub", url: process.env.PUBLIC_MIRROR_GITHUB ?? "(pending push)" },
-      { name: "Codeberg", url: process.env.PUBLIC_MIRROR_CODEBERG ?? "(pending push)" },
-    ],
-    archive_snapshots: [
-      { name: "Wayback Machine", url: process.env.PUBLIC_ARCHIVE_WAYBACK ?? "(pending snapshot)" },
-      { name: "archive.today", url: process.env.PUBLIC_ARCHIVE_TODAY ?? "(pending snapshot)" },
-    ],
-    peer_custodian: "(none secured for v1; AFROSAI-E / IDI engagement is post-launch work)",
+    mirrors: mirrorsConfig.mirrors
+      .filter((m) => m.url)
+      .map((m) => ({ name: m.name, url: m.url, jurisdiction: m.jurisdiction ?? null })),
+    archive_snapshots: mirrorsConfig.archive_snapshots
+      .map((s) => ({ name: s.name, url: s.url ?? "(pending capture)", captured_utc: s.captured_utc ?? null })),
+    peer_custodian: mirrorsConfig.peer_custodian?.name
+      ? `${mirrorsConfig.peer_custodian.name} (${mirrorsConfig.peer_custodian.url ?? "—"})`
+      : (mirrorsConfig.peer_custodian?.note ?? "(none secured for v1)"),
     last_provenance_fetch_utc: "2026-06-02T16:10:46+00:00",
   };
   await writeFile(join(SITE_DATA, "custody.json"), JSON.stringify(custody, null, 2) + "\n");

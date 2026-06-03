@@ -6,23 +6,27 @@
   "mirrors": [
     {
       "name": "GitHub",
-      "url": "https://github.com/oag-puntland-archive/oag-puntland"
+      "url": "https://github.com/oag-puntland-archive/oag-puntland",
+      "jurisdiction": "US (Delaware-incorporated, US legal compulsion applies)"
     },
     {
       "name": "Codeberg",
-      "url": "https://codeberg.org/Abdirahim/oag-puntland"
+      "url": "https://codeberg.org/Abdirahim/oag-puntland",
+      "jurisdiction": "DE (non-profit, German law applies)"
     }
   ],
   "archive_snapshots": [
     {
       "name": "Wayback Machine",
-      "url": "https://web.archive.org/web/20260603072345/https://oag.pl.so/"
+      "url": "https://web.archive.org/web/20260603072345/https://oag.pl.so/",
+      "captured_utc": "2026-06-03T07:23:45Z"
     },
     {
       "name": "archive.today",
-      "url": "(pending snapshot)"
+      "url": "(pending capture)",
+      "captured_utc": null
     }
   ],
-  "peer_custodian": "(none secured for v1; AFROSAI-E / IDI engagement is post-launch work)",
+  "peer_custodian": "no AFROSAI-E / IDI / academic / CSO peer custodian secured for v1; engagement targets documented in governance/custody.md §5",
   "last_provenance_fetch_utc": "2026-06-02T16:10:46+00:00"
 }
