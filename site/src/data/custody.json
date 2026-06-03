@@ -6,17 +6,17 @@
   "mirrors": [
     {
       "name": "GitHub",
-      "url": "(pending push)"
+      "url": "https://github.com/oag-puntland-archive/oag-puntland"
     },
     {
       "name": "Codeberg",
-      "url": "(pending push)"
+      "url": "https://codeberg.org/Abdirahim/oag-puntland"
     }
   ],
   "archive_snapshots": [
     {
       "name": "Wayback Machine",
-      "url": "(pending snapshot)"
+      "url": "https://web.archive.org/web/20260603072345/https://oag.pl.so/"
     },
     {
       "name": "archive.today",
