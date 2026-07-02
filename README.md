@@ -46,4 +46,3 @@ The corpus is republished under the OAG's own publication terms. The site source
 
 ---
 
-🤖 v1 architecture by Claude Opus 4.7 (1M context); content authored by the OAG Puntland and republished under the already-public doctrine.
